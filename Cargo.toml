@@ -1,0 +1,32 @@
+[package]
+name = "textlift"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Web server
+axum = "0.7"
+tokio = { version = "1.37", features = ["full"] }
+
+# Logging and error handling
+tracing = "0.1"
+tracing-subscriber = "0.3"
+anyhow = "1.0"
+
+# Multipart form handling (file uploads)
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors"] }
+mime = "0.3"
+bytes = "1.5"
+tokio-util = "0.7"
+futures = "0.3"
+multipart = "0.18"
+
+# PDF text extraction
+lopdf = "0.31"
+
+# For file handling
+uuid = { version = "1", features = ["v4"] }
+
+# Optional, if you want to use environment variables later
+dotenvy = "0.15"
