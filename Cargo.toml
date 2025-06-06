@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 # Web server
-axum = "0.7"
+axum = { version = "0.7", features = ["multipart"] }
 tokio = { version = "1.37", features = ["full"] }
 
 # Logging and error handling
@@ -20,13 +20,14 @@ mime = "0.3"
 bytes = "1.5"
 tokio-util = "0.7"
 futures = "0.3"
-multipart = "0.18"
 
 # PDF text extraction
+pdf-extract = "0.7"
 lopdf = "0.31"
 
 # For file handling
 uuid = { version = "1", features = ["v4"] }
+tempfile = "3.10"
 
 # Optional, if you want to use environment variables later
 dotenvy = "0.15"
